@@ -19,7 +19,9 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
-        return view('auth.register');
+        $countries = \App\Models\Country::all(); // Fetch all countries
+
+        return view('auth.register', compact('countries'));
     }
 
     /**
@@ -32,9 +34,10 @@ class RegisteredUserController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'username' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
             'phone' => ['required', 'string', 'max:255'],
             'city' => ['required', 'string', 'max:255'],
+            'country' => ['required', 'string', 'max:2'], // Validate country code
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
@@ -42,8 +45,9 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'username' => $request->username,
             'email' => $request->email,
-            'phone' => $request ->phone,
-            'city' => $request ->city,
+            'phone' => $request->phone,
+            'city' => $request->city,
+            'country' => $request->country, // Save country code to the user
             'password' => Hash::make($request->password),
         ]);
 

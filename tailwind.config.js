@@ -14,6 +14,13 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                // Tambahkan warna kustom di sini
+                customYellow: '#ffc530', // Contoh warna kuning kustom
+                customBlue: '#1E3A8A',   // Contoh warna biru kustom
+                customGreen: '#10B981',  // Contoh warna hijau kustom
+               
+            },
         },
     },
 

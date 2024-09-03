@@ -88,19 +88,22 @@
             <label for="city">City</label>
           </div>
 
-          <!-- Nationality -->
-          <!--<div class="form-floating mb-3">
-            <x-input-label for="nationality" :value="__('Nationality')" />
-            <select id="nationality" class="form-select" name="nationality" required>
-              <option selected>Nationality</option>
-              <option value="AF">Afghanistan</option>
-              <option value="AS">Arab Saudi</option>
-              <option value="IDN">Indonesian</option>
-              <option value="SG">Singapore</option>
-            </select>
-            <x-input-error :messages="$errors->get('nationality')" class="mt-2" />
-            <label for="nationality">Nationality</label>
-          </div> -->
+          <!-- Country nationality -->
+       <!-- Kolom Country Nationality -->
+<div class="form-floating mb-3">
+  <select id="country" name="country" class="form-select" required>
+      <option value="">{{ __('Select a country') }}</option>
+      @foreach($countries as $country)
+          <option value="{{ $country->code }}" {{ old('country') == $country->code ? 'selected' : '' }}>
+              {{ $country->name }}
+          </option>
+      @endforeach
+  </select>
+  <label for="country">Country</label>
+  <x-input-error :messages="$errors->get('country')" class="mt-2" />
+</div>
+
+          
 
           <!-- Password -->
           <div class="form-floating mb-3">

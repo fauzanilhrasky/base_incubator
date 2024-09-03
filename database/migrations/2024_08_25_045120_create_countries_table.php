@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('countries', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('short_code');
+            $table->string('code');
             $table->timestamps();
             $table->softDeletes();
         });

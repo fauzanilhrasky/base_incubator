@@ -389,9 +389,9 @@ body {
 
 
 .banner3{
-    height: 400px;
+    height: 380px;
     background-color: #222226;
-    margin-top: 50px;
+    margin-top: 100px;
     border: 2px #f3bf39;
 
 }
@@ -725,7 +725,7 @@ color: white;
 .services .service-item {
     background-color: var(--surface-color);
     box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
-    padding: 50px 30px;
+    padding: 70px 30px;
     transition: all 0.3s ease-in-out;
     height: 100%;
     position: relative;
@@ -755,6 +755,11 @@ color: white;
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 20px;
+  }
+
+  .services .container h2{
+    color: #fff;
+    background-color: #f3bf39;
   }
   
   .services .service-item h4 a {
@@ -981,3 +986,11 @@ color: white;
   
 /*# sourceMappingURL=main.css.map */
 
+
+
+
+
+
+ /*--------------------------------------------------------------
+# navigation
+--------------------------------------------------------------*/

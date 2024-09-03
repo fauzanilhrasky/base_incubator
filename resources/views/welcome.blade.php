@@ -27,7 +27,7 @@
                     </div>
                     <div class="col-lg-6 col-12 text-center">
                         <a href="#">
-                            <img src="{{ asset('images/banner.png') }}" class="img-fluid" alt="">
+                            <img src="{{ asset('images/banner-Photoroom.png') }}" class="img-fluid" alt="">
                         </a>
                     </div>
                 </div>
@@ -51,9 +51,10 @@
           <div class="row justify-content-center aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
             <div class="col-xl-10">
               <div class="text-center">
-                <p class="story">
-                    OUR EXPLANATION
-                </p>
+                <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+                    <h2 class="text-white">OUR EXPLANATION</h2>
+                    
+                  </div>
 
                 <h1 class="primary-header">
                     Forward Innovation
@@ -83,7 +84,7 @@
 
       <!-- Section Title -->
       <div class="container section-title aos-init aos-animate" data-aos="fade-up">
-        <h2>Services</h2>
+        <h2 class="service">Services</h2>
         <p>Check Our <span class="description-title">Services</span></p>
       </div><!-- End Section Title -->
 
